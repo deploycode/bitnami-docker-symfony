@@ -43,8 +43,8 @@ if [[ "$1" = *"/run.sh"* ]]; then
   [ -d "$PROJECT_DIRECTORY/public" ] && export WEB_DIR=$PROJECT_DIRECTORY/public
 
   # Link Symfony app to the index
-  if [ ! -f "$WEB_DIR/index.php" ] && [ -f "$WEB_DIR/app.php" ]; then
-    ln -s "$WEB_DIR/app.php" "$WEB_DIR/index.php"
+  if [ ! -f "$WEB_DIR/index.php" ] && [ -f "$WEB_DIR/app_dev.php" ]; then
+    ln -s "$WEB_DIR/app_dev.php" "$WEB_DIR/index.php"
   fi
 fi
 
